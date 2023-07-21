@@ -1,0 +1,16 @@
+﻿{
+  "July": [
+    {
+      "Date": "Saturday, July 1st, 2023",
+      "Number": "1"
+    },
+    {
+      "Date": "Sunday, July 2nd, 2023",
+      "Number": "2"
+    },
+    {
+      "Date": "Monday, July 3rd, 2023",
+      "Number" :  "3"
+    }
+  ]
+}

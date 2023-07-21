@@ -1,0 +1,255 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<html>
+<head>
+    <style>
+        body {
+            background-image: url("https://cdn.wallpapersafari.com/22/69/iSbH2F.jpg");
+            width:100%;
+            background-repeat: no-repeat;
+            background-position:center;
+            background-size: cover;
+            height: 500px;
+            background-color: #D8F7FF;
+        }
+
+        .part{
+            scroll-snap-type: mandatory;
+            scroll-snap-type: y mandatory;
+        }
+
+        .child{
+            scroll-snap-align: start;
+        }
+
+
+        .header:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        input {
+            margin: 0;
+            border: none;
+            border-radius: 0;
+            width: 75%;
+            padding: 10px;
+            font-size: 16px;
+            font-family: 'Ink Free';
+            font-weight: bold;
+            color: black;
+        }
+
+        .addBtn {
+            padding: 10px;
+            width: 25%;
+            background: #d9d9d9;
+            color: black;
+            text-align: center;
+            font-size: 16px;
+            font-family: 'Ink Free';
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+            border-radius: 0;
+        }
+
+        .addBtn:hover {
+            background-color: #bbb;
+        }
+
+        h3 {
+            font-family: 'Ink Free';
+            font-weight: bold
+        }
+
+        p {
+            font-family: 'Ink Free';
+            font-weight: bold;
+            font-size: 19px
+        }
+    </style>
+</head>
+<body class="part">
+    <div class="child" style="padding-top:250px; height:700px; padding-bottom:100px">
+        <h1 style="font-family:'Segoe Script';font-size:64px">Welcome! </h1>
+        <br /><br /><br /><br />
+    </div>
+    <div class="child" style="padding-top:200px">
+        <br /><br />
+        <h2 style="font-family:'Ink Free'; font-weight:bold">Quote of the Day!</h2>
+        <h3 style="font-family:'Ink Free';font-weight:bold">"The most difficult thing is the decision to act. The rest is merely tenacity."</h3>
+        <i style="font-family:'Ink Free';font-weight:bold;font-size:20px"> - Amelia Earhart </i>
+        <br /><br />
+    </div>
+    <div class="child" style="padding-top:250px">
+        <h2 style="font-family:'Ink Free'; font-weight:bold">Weather Forecast</h2>
+        <a class="weatherwidget-io" href="https://forecast7.com/en/36d78n119d42/california/" data-label_1="California" data-label_2="WEATHER" data-theme="original">California WEATHER</a>
+        <script>
+            !function (d, s, id) { var js, fjs = d.getElementsByTagName(s)[0]; if (!d.getElementById(id)) { js = d.createElement(s); js.id = id; js.src = 'https://weatherwidget.io/js/widget.min.js'; fjs.parentNode.insertBefore(js, fjs); } }(document, 'script', 'weatherwidget-io-js');
+        </script>
+        <br /><br />
+        <br /><br />
+        <br /><br />
+    </div>
+    <div class="child" style="padding-top:200px">
+        <h2 style="font-family:'Ink Free'; font-weight:bold">Citizen of the Week!</h2>
+        <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_640.png" alt="Girl in a jacket" width="250" height="250">
+        <h3 style="font-family:'Ink Free';font-weight:bold">Bob</h3>
+        <p style="font-family:'Ink Free';font-weight:bold"> Shout out for fixing the electricity pole. </p>
+        <br /><br />
+        <br /><br />
+    </div>
+    <div class="child" style="padding-top:200px">
+        <br /><br />
+        <br /><br />
+        <h2 style="font-family:'Ink Free'; font-weight:bold; font-size: 36px;">Daily Recommendations!</h2>
+        <br />
+        <h3 style="font-family:'Ink Free';font-weight:bold">Daily Stretch</h3>
+        <br />
+        <div class="mySlides">
+            <div style="width: 100%; display: table;">
+                <div style="display: table-row">
+                    <div style="width: 300px; display: table-cell;">
+                        <a href="https://youtu.be/12pSXygAzwk"><img src="https://i.ytimg.com/vi/12pSXygAzwk/maxresdefault.jpg" width="400" /></a>
+                    </div>
+                    <div style="width: 100px; display: table-cell;">
+                        <br /><br />
+                    </div>
+                    <div style="display: table-cell;">
+                        <p style="font-family:'Ink Free';font-weight:bold;font-size:19px">8 MIN SITTING TOO MUCH STRETCH - fix your posture, stand straight & reduce pain / Pamela Reif</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br />
+        <h3 style="font-family:'Ink Free';font-weight:bold">Daily Local Restaurant</h3>
+        <br />
+        <div class="mySlides">
+            <div style="width: 100%; display: table;">
+                <div style="display: table-row">
+                    <div style="width: 300px; display: table-cell;">
+                        <a href="https://www.chubbycattle.com/"><img src="https://ttn-media.s3.amazonaws.com/2019/04/24195528/3.jpg" width="400" /></a>
+                    </div>
+                    <div style="width: 100px; display: table-cell;">
+                        <br /><br />
+                    </div>
+                    <div style="display: table-cell;">
+                        <p style="font-family: 'Ink Free'; font-weight: bold; font-size: 19px">Chubby Cattle 'Local' Restaurant</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br />
+        <h3 style="font-family:'Ink Free';font-weight:bold">Daily Recipe</h3>
+        <br />
+        <div class="mySlides">
+            <div style="width: 100%; display: table;">
+                <div style="display: table-row">
+                    <div style="width: 300px; display: table-cell;">
+                        <a href="https://www.allrecipes.com/air-fryer-mini-dark-chocolate-cake-with-brown-butter-frosting-recipe-7509612"><img src="https://www.allrecipes.com/thmb/ylHHityWd9Eaw2bfgyYAk_OC5Zo=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/7509612-air-fryer-mini-dark-chocolate-cake-with-brown-butter-frosting-GOLDMAN-R311671-4x3-2717-cb0e2b7273b94b63946d0a0259debbe0.jpg" width="400" /></a>
+                    </div>
+                    <div style="width: 100px; display: table-cell;">
+                        <br /><br />
+                    </div>
+                    <div style="display: table-cell;">
+                        <p style="font-family:'Ink Free';font-weight:bold;font-size:19px">Air Fryer Mini Dark Chocolate Cake with Brown Butter Frosting</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br />
+    </div>
+    <br /><br />
+
+          <div style="padding-top:200px">
+              <h2 style="font-family:'Ink Free'; font-weight:bold">Community Post!</h2>
+              <br />
+              <section id="myBlog">
+                  <div>
+                      <h3 style="font-family:'Ink Free';font-weight:bold">Summer Picnic</h3>
+                      <p style="font-family:'Ink Free';font-weight:bold;font-size:19px"> 12:00pm Tuesday, August 1st, 2023 </p>
+                      <p style="font-family:'Ink Free';font-weight:bold;font-size:19px"> Penguin park </p>
+                      <p style="font-family:'Ink Free';font-weight:bold;font-size:19px"> Bob is hosting a summer potluck picnic. Feel free to bring utensils, picnic blankets, food, drinks, and more!</p>
+                  </div>
+              </section>
+              <br />
+
+
+              <h3 style="font-family:'Ink Free';font-weight:bold">Submit a post:</h3>
+
+              <div id="myDIV" class="header">
+                  <h4 style="font-family:'Ink Free';font-weight:bold">Title:</h4>
+                  <input type="text" id="myInput1" placeholder="Title...">
+                  <br />
+                  <p style="font-family:'Ink Free';font-weight:bold;font-size:19px">Time: </p>
+                  <input type="text" id="myInput2" placeholder="Time...">
+                  <br />
+                  <p style="font-family:'Ink Free';font-weight:bold;font-size:19px">Location: </p>
+                  <input type="text" id="myInput3" placeholder="Location...">
+                  <br />
+                  <p style="font-family:'Ink Free';font-weight:bold;font-size:19px">Details: </p>
+                  <input type="text" id="myInput4" placeholder="Details...">
+                  <br /><br />
+                  <span onclick="newElement()" class="addBtn">Submit</span>
+              </div>
+
+              <script>
+                  // Create a new list item when clicking on the Add button
+                  function newElement() {
+                      var br = document.createElement("br");
+                      var h3 = document.createElement("h3");
+                      var p1 = document.createElement("p");
+                      var p2 = document.createElement("p");
+                      var p3 = document.createElement("p");
+                      var input1 = document.getElementById("myInput1").value;
+                      var input2 = document.getElementById("myInput2").value;
+                      var input3 = document.getElementById("myInput3").value;
+                      var input4 = document.getElementById("myInput4").value;
+
+                      var a = document.createTextNode(input1);
+                      h3.appendChild(a);
+                      var b = document.createTextNode(input2);
+                      p1.appendChild(b);
+                      var c = document.createTextNode(input3);
+                      p2.appendChild(c);
+                      var d = document.createTextNode(input4);
+                      p3.appendChild(d);
+                      if (input1 === '' || input2 === '' || input3 === '') {
+                          alert("You must write something!");
+                      } else {
+                          document.getElementById("myBlog").appendChild(br);
+                          document.getElementById("myBlog").appendChild(h3);
+                          document.getElementById("myBlog").appendChild(p1);
+                          document.getElementById("myBlog").appendChild(p2);
+                          document.getElementById("myBlog").appendChild(p3);
+                      }
+                      document.getElementById("myInput1").value = "";
+                      document.getElementById("myInput2").value = "";
+                      document.getElementById("myInput3").value = "";
+                      document.getElementById("myInput4").value = "";
+
+                      for (i = 0; i < close.length; i++) {
+                          close[i].onclick = function () {
+                              var div = this.parentElement;
+                              div.style.display = "none";
+                          }
+                      }
+                  }
+              </script>
+          </div>
+
+    <br /><br />
+        <center>
+        <div style="font-family:'Ink Free'; font-weight:bold; font-size:30px; padding-top:200px">
+            @Html.ActionLink("Continue to Daily Schedule!", "About", "Home")
+        </div>
+        </center>
+    <br /><br />
+
+</body>
+</html>
+

@@ -1,0 +1,79 @@
+﻿@{
+    ViewBag.Title = "Contact";
+}
+
+<html>
+<body>
+    <div id="digital-clock"> </div>
+    <script>
+        function Time() {
+
+            var date = new Date();
+            var hour = date.getHours();
+            var minute = date.getMinutes();
+            var second = date.getSeconds();
+            var curday = date.getDate();
+
+            // Variable to store AM / PM
+            var period = "";
+
+            // Assigning AM / PM according to the current hour
+            if (hour >= 12) {
+                period = "PM";
+            } else {
+                period = "AM";
+            }
+
+            // Converting the hour in 12-hour format
+            if (hour == 0) {
+                hour = 12;
+            } else {
+                if (hour > 12) {
+                    hour = hour - 12;
+                }
+            }
+
+            // Updating hour, minute, and second
+            // if they are less than 10
+            hour = update(hour);
+            minute = update(minute);
+            second = update(second);
+
+            // Adding time elements to the div
+            document.getElementById("digital-clock").innerText = curday + "/" + hour + " : " + minute + " : " + second + " " + period;
+
+            // Set Timer to 1 sec (1000 ms)
+            setTimeout(Time, 1000);
+        }
+
+        // Function to update time elements if they are less than 10
+        // Append 0 before time elements if they are less than 10
+        function update(t) {
+            if (t < 10) {
+                return "0" + t;
+            }
+            else {
+                return t;
+            }
+        }
+
+        Time();
+    </script>
+</body>
+</html>
+
+
+@*<h2>@ViewBag.Title.</h2>
+<h3>@ViewBag.Message</h3>
+
+<address>
+    One Microsoft Way<br />
+    Redmond, WA 98052-6399<br />
+    <abbr title="Phone">P:</abbr>
+    425.555.0100
+</address>
+
+<address>
+    <strong>Support:</strong>   <a href="mailto:Support@example.com">Support@example.com</a><br />
+    <strong>Marketing:</strong> <a href="mailto:Marketing@example.com">Marketing@example.com</a>
+</address>*@
