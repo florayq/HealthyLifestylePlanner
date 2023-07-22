@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using TechXccelerate.Models;
 
 namespace TechXccelerate.Controllers
 {
@@ -13,11 +14,23 @@ namespace TechXccelerate.Controllers
             return View();
         }
 
-        public ActionResult About()
-        {
-            ViewBag.Message = "Your application description page.";
+        //public ActionResult About()
+        //{
+        //    ViewBag.Message = "Your application description page.";
 
-            return View();
+        //    return View(1);
+        //}
+
+        public ActionResult About(int num)
+        {
+            //Dates obj = new Dates();
+            //obj.WeekDay = "Saturday";
+            //obj.Month = "July";
+            //obj.Number = 1;
+            //obj.Year = 2023;
+            //var obj = Convert.ToDateTime(date);
+
+            return View(num);
         }
 
         public ActionResult Contact()
@@ -47,7 +60,7 @@ namespace TechXccelerate.Controllers
         //    int days = DateTime.DaysInMonth(now.Year, now.Month);
 
         //    int dayoftheweek = Convert.ToInt32(startofthemonth.DayOfWeek.ToString("d")) +1;
-            
+
         //}
     }
 }

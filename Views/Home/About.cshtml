@@ -1,4 +1,5 @@
-﻿@{
+﻿@*@model TechXccelerate.Models.Dates*@
+@{
     ViewBag.Title = "About";
 }
 
@@ -9,602 +10,263 @@
 </center>
 <br />
 
-<div class="slideshow-container">
+<center>
+    <div style="width: 100%; display: table;">
+        <div style="display: table-row">
+            <div style="width: 600px; display: table-cell;">
+                <div id="fulldate">
+                    @*<h4 id="fulldate"></h4>*@
+                </div>
+                <script>
+                    var dict = {
+                        1 : "Saturday, July 1st, 2023",
+                        2 : "Sunday, July 2nd, 2023",
+                        3: "Monday, July 3rd, 2023",
+                        4: "Tuesday, July 4th, 2023",
+                        5: "Wednesday, July 5th, 2023",
+                        6: "Thursday, July 6th, 2023",
+                        7: "Friday, July 7th, 2023",
+                        8: "Saturday, July 8th, 2023",
+                        9: "Sunday, July 9th, 2023",
+                        10: "Monday, July 10th, 2023",
+                        11: "Tuesday, July 11th 2023",
+                        12: "Wednesday, July 12th, 2023",
+                        13: "Thursday, July 13th, 2023",
+                        14: "Friday, July 14th, 2023",
+                        15: "Saturday, July 15th, 2023",
+                        16: "Sunday, July 16th, 2023",
+                        17: "Monday, July 17th, 2023",
+                        18: "Tuesday, July 18th, 2023",
+                        19: "Wednesday, July 19th, 2023",
+                        20: "Thursday, July 20th, 2023",
+                        21: "Friday, July 21st, 2023",
+                        22: "Saturday, July 22nd, 2023",
+                        23: "Sunday, July 23rd, 2023",
+                        24: "Monday, July 24th, 2023",
+                        25: "Tuesday, July 25th, 2023",
+                        26: "Wednesday, July 26th, 2023",
+                        27: "Thursday, July 27th, 2023",
+                        28: "Friday, July 28th, 2023",
+                        29: "Saturday, July 29th, 2023",
+                        30: "Sunday, July 30th, 2023",
+                        31: "Monday, July 31, 2023"
+                    };
+                    var num = @Model
+                    var day = dict[num];
+                    var h4 = document.createElement("h4");
+                    h4.setAttribute('id', 'datetitle')
+                    var trans = document.createTextNode(day);
+                    h4.appendChild(trans);
+                    document.getElementById("fulldate").appendChild(h4);
+                </script>
 
-    <div class="mySlides">
-        <div style="width: 100%; display: table;">
-            <div style="display: table-row">
-                <div style="width: 600px; display: table-cell;">
-                    <h4>Saturday, July 1st, 2023</h4>
-                    <table border="1">
-                        <tr>
-                            <th width="100px" style="background-color:#ccccff; font-size:16px">Time</th>
-                            <th width="400px" style="background-color: #ccccff; font-size: 16px">Task</th>
-                        </tr>
-                        <tr>
-                            <td>12:00am - 1:00am</td>
-                            <td><input type="text" /></td>
-                        </tr>
-                        <tr>
-                            <td>1:00am - 2:00am</td>
-                            <td><input type="text" /></td>
-                        </tr>
-                        <tr>
-                            <td>2:00am - 3:00am</td>
-                            <td><input type="text" /></td>
-                        </tr>
-                        <tr>
-                            <td>3:00am - 4:00am</td>
-                            <td><input type="text" /></td>
-                        </tr>
-                        <tr>
-                            <td>4:00am - 5:00am</td>
-                            <td><input type="text" /></td>
-                        </tr>
-                        <tr>
-                            <td>5:00am - 6:00am</td>
-                            <td><input type="text" /></td>
-                        </tr>
-                        <tr>
-                            <td>6:00am - 7:00am</td>
-                            <td><input type="text" /></td>
-                        </tr>
-                        <tr>
-                            <td>7:00am - 8:00am</td>
-                            <td><input type="text" /></td>
-                        </tr>
-                        <tr>
-                            <td>8:00am - 9:00am</td>
-                            <td>Breakfast</td>
-                        </tr>
-                        <tr>
-                            <td>9:00am - 10:00am</td>
-                            <td><input type="text" /></td>
-                        </tr>
-                        <tr>
-                            <td>10:00am - 11:00am</td>
-                            <td><input type="text" /></td>
-                        </tr>
-                        <tr>
-                            <td>11:00am - 12:00pm</td>
-                            <td><input type="text" /></td>
-                        </tr>
-                        <tr>
-                            <td>12:00pm - 1:00pm</td>
-                            <td>Lunch</td>
-                        </tr>
-                        <tr>
-                            <td>1:00pm - 2:00pm</td>
-                            <td><input type="text" /></td>
-                        </tr>
-                        <tr>
-                            <td>2:00pm - 3:00pm</td>
-                            <td><input type="text" /></td>
-                        </tr>
-                        <tr>
-                            <td>3:00pm - 4:00pm</td>
-                            <td><input type="text" /></td>
-                        </tr>
-                        <tr>
-                            <td>4:00pm - 5:00pm</td>
-                            <td><input type="text" /></td>
-                        </tr>
-                        <tr>
-                            <td>5:00pm - 6:00pm</td>
-                            <td><input type="text" /></td>
-                        </tr>
-                        <tr>
-                            <td>6:00pm - 7:00pm</td>
-                            <td><input type="text" /></td>
-                        </tr>
-                        <tr>
-                            <td>7:00pm - 8:00pm</td>
-                            <td>Dinner</td>
-                        </tr>
-                        <tr>
-                            <td>8:00pm - 9:00pm</td>
-                            <td><input type="text" /></td>
-                        </tr>
-                        <tr>
-                            <td>9:00pm - 10:00pm</td>
-                            <td><input type="text" /></td>
-                        </tr>
-                        <tr>
-                            <td>10:00pm - 11:00pm</td>
-                            <td><input type="text" /></td>
-                        </tr>
-                        <tr>
-                            <td>11:00pm - 12:00am</td>
-                            <td><input type="text" /></td>
-                        </tr>
-                    </table>
+
+                <table border="1">
+                    <tr>
+                        <th width="100px" style="background-color:#ccccff; font-size:16px">Time</th>
+                        <th width="400px" style="background-color: #ccccff; font-size: 16px">Task</th>
+                    </tr>
+                    <tr>
+                        <td>12:00am - 1:00am</td>
+                        <td><input type="text" /></td>
+                    </tr>
+                    <tr>
+                        <td>1:00am - 2:00am</td>
+                        <td><input type="text" /></td>
+                    </tr>
+                    <tr>
+                        <td>2:00am - 3:00am</td>
+                        <td><input type="text" /></td>
+                    </tr>
+                    <tr>
+                        <td>3:00am - 4:00am</td>
+                        <td><input type="text" /></td>
+                    </tr>
+                    <tr>
+                        <td>4:00am - 5:00am</td>
+                        <td><input type="text" /></td>
+                    </tr>
+                    <tr>
+                        <td>5:00am - 6:00am</td>
+                        <td><input type="text" /></td>
+                    </tr>
+                    <tr>
+                        <td>6:00am - 7:00am</td>
+                        <td><input type="text" /></td>
+                    </tr>
+                    <tr>
+                        <td>7:00am - 8:00am</td>
+                        <td><input type="text" /></td>
+                    </tr>
+                    <tr>
+                        <td>8:00am - 9:00am</td>
+                        <td>Breakfast</td>
+                    </tr>
+                    <tr>
+                        <td>9:00am - 10:00am</td>
+                        <td><input type="text" /></td>
+                    </tr>
+                    <tr>
+                        <td>10:00am - 11:00am</td>
+                        <td><input type="text" /></td>
+                    </tr>
+                    <tr>
+                        <td>11:00am - 12:00pm</td>
+                        <td><input type="text" /></td>
+                    </tr>
+                    <tr>
+                        <td>12:00pm - 1:00pm</td>
+                        <td>Lunch</td>
+                    </tr>
+                    <tr>
+                        <td>1:00pm - 2:00pm</td>
+                        <td><input type="text" /></td>
+                    </tr>
+                    <tr>
+                        <td>2:00pm - 3:00pm</td>
+                        <td><input type="text" /></td>
+                    </tr>
+                    <tr>
+                        <td>3:00pm - 4:00pm</td>
+                        <td><input type="text" /></td>
+                    </tr>
+                    <tr>
+                        <td>4:00pm - 5:00pm</td>
+                        <td><input type="text" /></td>
+                    </tr>
+                    <tr>
+                        <td>5:00pm - 6:00pm</td>
+                        <td><input type="text" /></td>
+                    </tr>
+                    <tr>
+                        <td>6:00pm - 7:00pm</td>
+                        <td><input type="text" /></td>
+                    </tr>
+                    <tr>
+                        <td>7:00pm - 8:00pm</td>
+                        <td>Dinner</td>
+                    </tr>
+                    <tr>
+                        <td>8:00pm - 9:00pm</td>
+                        <td><input type="text" /></td>
+                    </tr>
+                    <tr>
+                        <td>9:00pm - 10:00pm</td>
+                        <td><input type="text" /></td>
+                    </tr>
+                    <tr>
+                        <td>10:00pm - 11:00pm</td>
+                        <td><input type="text" /></td>
+                    </tr>
+                    <tr>
+                        <td>11:00pm - 12:00am</td>
+                        <td><input type="text" /></td>
+                    </tr>
+                </table>
+            </div>
+
+
+            <div style="display: table-cell;">
+                <h4>To-Do List</h4>
+                <div id="myDIV" class="header">
+                    <input type="text" id="myInput" placeholder="Task...">
+                    <span onclick="newElement()" class="addBtn">Add</span>
                 </div>
 
+                <ul id="myUL">
+                    <li>Do the laundry</li>
+                    <li>Organize your room</li>
+                    <li>Touch grass</li>
+                    <li>Shower</li>
+                    <li>Meditate</li>
+                </ul>
 
-                <div style="display: table-cell;">
-                    <h4>To-Do List</h4>
-                    <div id="myDIV" class="header">
-                        <input type="text" id="myInput" placeholder="Task...">
-                        <span onclick="newElement()" class="addBtn">Add</span>
-                    </div>
+                <script>
+                    // Create a "close" button and append it to each list item
+                    var myNodelist = document.getElementsByTagName("LI");
+                    var i;
+                    for (i = 0; i < myNodelist.length; i++) {
+                        var span = document.createElement("SPAN");
+                        var txt = document.createTextNode("\u00D7");
+                        span.className = "close";
+                        span.appendChild(txt);
+                        myNodelist[i].appendChild(span);
+                    }
 
-                    <ul id="myUL">
-                        <li>Do the laundry</li>
-                        <li>Organize your room</li>
-                        <li>Touch grass</li>
-                        <li>Shower</li>
-                        <li>Meditate</li>
-                    </ul>
-
-                    <script>
-                        // Create a "close" button and append it to each list item
-                        var myNodelist = document.getElementsByTagName("LI");
-                        var i;
-                        for (i = 0; i < myNodelist.length; i++) {
-                            var span = document.createElement("SPAN");
-                            var txt = document.createTextNode("\u00D7");
-                            span.className = "close";
-                            span.appendChild(txt);
-                            myNodelist[i].appendChild(span);
+                    // Click on a close button to hide the current list item
+                    var close = document.getElementsByClassName("close");
+                    var i;
+                    for (i = 0; i < close.length; i++) {
+                        close[i].onclick = function () {
+                            var div = this.parentElement;
+                            div.style.display = "none";
                         }
+                    }
 
-                        // Click on a close button to hide the current list item
-                        var close = document.getElementsByClassName("close");
-                        var i;
+                    // Checks off list item when clicked --> item is done!
+                    var list = document.querySelector('ul');
+                    list.addEventListener('click', function (ev) {
+                        if (ev.target.tagName === 'LI') {
+                            ev.target.classList.toggle('checked');
+                        }
+                    }, false);
+
+                    // Create a new list item when clicking on the Add button
+                    function newElement() {
+                        var li = document.createElement("li");
+                        var inputValue = document.getElementById("myInput").value;
+                        var t = document.createTextNode(inputValue);
+                        li.appendChild(t);
+                        if (inputValue === '') {
+                            alert("You must write something!");
+                        } else {
+                            document.getElementById("myUL").appendChild(li);
+                        }
+                        document.getElementById("myInput").value = "";
+
+                        var span = document.createElement("SPAN");
+                        var txt = document.createTextNode("\u00D7");
+                        span.className = "close";
+                        span.appendChild(txt);
+                        li.appendChild(span);
+
                         for (i = 0; i < close.length; i++) {
                             close[i].onclick = function () {
                                 var div = this.parentElement;
                                 div.style.display = "none";
                             }
                         }
+                    }
+                </script>
 
-                        // Checks off list item when clicked --> item is done!
-                        var list = document.querySelector('ul');
-                        list.addEventListener('click', function (ev) {
-                            if (ev.target.tagName === 'LI') {
-                                ev.target.classList.toggle('checked');
-                            }
-                        }, false);
-
-                        // Create a new list item when clicking on the Add button
-                        function newElement() {
-                            var li = document.createElement("li");
-                            var inputValue = document.getElementById("myInput").value;
-                            var t = document.createTextNode(inputValue);
-                            li.appendChild(t);
-                            if (inputValue === '') {
-                                alert("You must write something!");
-                            } else {
-                                document.getElementById("myUL").appendChild(li);
-                            }
-                            document.getElementById("myInput").value = "";
-
-                            var span = document.createElement("SPAN");
-                            var txt = document.createTextNode("\u00D7");
-                            span.className = "close";
-                            span.appendChild(txt);
-                            li.appendChild(span);
-
-                            for (i = 0; i < close.length; i++) {
-                                close[i].onclick = function () {
-                                    var div = this.parentElement;
-                                    div.style.display = "none";
-                                }
-                            }
-                        }
-                    </script>
-
-                </div>
             </div>
         </div>
     </div>
-
-    <div class="mySlides">
-        <div style="width: 100%; display: table;">
-            <div style="display: table-row">
-                <div style="width: 600px; display: table-cell;">
-                    <h4>Sunday, July 2, 2023</h4>
-                    <table border="1">
-                        <tr>
-                            <th width="100px" style="background-color: #ccccff; font-size: 16px">Time</th>
-                            <th width="400px" style="background-color: #ccccff; font-size: 16px">Task</th>
-                        </tr>
-                        <tr>
-                            <td>12:00am - 1:00am</td>
-                            <td><input type="text" /></td>
-                        </tr>
-                        <tr>
-                            <td>1:00am - 2:00am</td>
-                            <td><input type="text" /></td>
-                        </tr>
-                        <tr>
-                            <td>2:00am - 3:00am</td>
-                            <td><input type="text" /></td>
-                        </tr>
-                        <tr>
-                            <td>3:00am - 4:00am</td>
-                            <td><input type="text" /></td>
-                        </tr>
-                        <tr>
-                            <td>4:00am - 5:00am</td>
-                            <td><input type="text" /></td>
-                        </tr>
-                        <tr>
-                            <td>5:00am - 6:00am</td>
-                            <td><input type="text" /></td>
-                        </tr>
-                        <tr>
-                            <td>6:00am - 7:00am</td>
-                            <td><input type="text" /></td>
-                        </tr>
-                        <tr>
-                            <td>7:00am - 8:00am</td>
-                            <td><input type="text" /></td>
-                        </tr>
-                        <tr>
-                            <td>8:00am - 9:00am</td>
-                            <td>Breakfast</td>
-                        </tr>
-                        <tr>
-                            <td>9:00am - 10:00am</td>
-                            <td><input type="text" /></td>
-                        </tr>
-                        <tr>
-                            <td>10:00am - 11:00am</td>
-                            <td><input type="text" /></td>
-                        </tr>
-                        <tr>
-                            <td>11:00am - 12:00pm</td>
-                            <td><input type="text" /></td>
-                        </tr>
-                        <tr>
-                            <td>12:00pm - 1:00pm</td>
-                            <td>Lunch</td>
-                        </tr>
-                        <tr>
-                            <td>1:00pm - 2:00pm</td>
-                            <td><input type="text" /></td>
-                        </tr>
-                        <tr>
-                            <td>2:00pm - 3:00pm</td>
-                            <td><input type="text" /></td>
-                        </tr>
-                        <tr>
-                            <td>3:00pm - 4:00pm</td>
-                            <td><input type="text" /></td>
-                        </tr>
-                        <tr>
-                            <td>4:00pm - 5:00pm</td>
-                            <td><input type="text" /></td>
-                        </tr>
-                        <tr>
-                            <td>5:00pm - 6:00pm</td>
-                            <td><input type="text" /></td>
-                        </tr>
-                        <tr>
-                            <td>6:00pm - 7:00pm</td>
-                            <td><input type="text" /></td>
-                        </tr>
-                        <tr>
-                            <td>7:00pm - 8:00pm</td>
-                            <td>Dinner</td>
-                        </tr>
-                        <tr>
-                            <td>8:00pm - 9:00pm</td>
-                            <td><input type="text" /></td>
-                        </tr>
-                        <tr>
-                            <td>9:00pm - 10:00pm</td>
-                            <td><input type="text" /></td>
-                        </tr>
-                        <tr>
-                            <td>10:00pm - 11:00pm</td>
-                            <td><input type="text" /></td>
-                        </tr>
-                        <tr>
-                            <td>11:00pm - 12:00am</td>
-                            <td><input type="text" /></td>
-                        </tr>
-                    </table>
-                </div>
-                <div style="display: table-cell;">
-                    <h4>To-Do List</h4>
-                    <div id="myDIV" class="header">
-                        <input type="text" id="myInput" placeholder="Title...">
-                        <span onclick="newElement()" class="addBtn">Add</span>
-                    </div>
-
-                    <ul id="myUL">
-                        <li>Do the laundry</li>
-                        <li>Organize your room</li>
-                        <li>Touch grass</li>
-                        <li>Shower</li>
-                        <li>Meditate</li>
-                    </ul>
-
-                    <script>
-                        // Create a "close" button and append it to each list item
-                        var myNodelist = document.getElementsByTagName("LI");
-                        var i;
-                        for (i = 0; i < myNodelist.length; i++) {
-                            var span = document.createElement("SPAN");
-                            var txt = document.createTextNode("\u00D7");
-                            span.className = "close";
-                            span.appendChild(txt);
-                            myNodelist[i].appendChild(span);
-                        }
-
-                        // Click on a close button to hide the current list item
-                        var close = document.getElementsByClassName("close");
-                        var i;
-                        for (i = 0; i < close.length; i++) {
-                            close[i].onclick = function () {
-                                var div = this.parentElement;
-                                div.style.display = "none";
-                            }
-                        }
-
-                        // Add a "checked" symbol when clicking on a list item
-                        var list = document.querySelector('ul');
-                        list.addEventListener('click', function (ev) {
-                            if (ev.target.tagName === 'LI') {
-                                ev.target.classList.toggle('checked');
-                            }
-                        }, false);
-
-                        // Create a new list item when clicking on the "Add" button
-                        function newElement() {
-                            var li = document.createElement("li");
-                            var inputValue = document.getElementById("myInput").value;
-                            var t = document.createTextNode(inputValue);
-                            li.appendChild(t);
-                            if (inputValue === '') {
-                                alert("You must write something!");
-                            } else {
-                                document.getElementById("myUL").appendChild(li);
-                            }
-                            document.getElementById("myInput").value = "";
-
-                            var span = document.createElement("SPAN");
-                            var txt = document.createTextNode("\u00D7");
-                            span.className = "close";
-                            span.appendChild(txt);
-                            li.appendChild(span);
-
-                            for (i = 0; i < close.length; i++) {
-                                close[i].onclick = function () {
-                                    var div = this.parentElement;
-                                    div.style.display = "none";
-                                }
-                            }
-                        }
-                    </script>
-
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="mySlides">
-        <div style="width: 100%; display: table;">
-            <div style="display: table-row">
-                <div style="width: 600px; display: table-cell;">
-                    <h4>Monday, July 3, 2023</h4>
-                    <table border="1">
-                        <tr>
-                            <th width="100px" style="background-color: #ccccff; font-size: 16px">Time</th>
-                            <th width="400px" style="background-color: #ccccff; font-size: 16px">Task</th>
-                        </tr>
-                        <tr>
-                            <td>12:00am - 1:00am</td>
-                            <td><input type="text" /></td>
-                        </tr>
-                        <tr>
-                            <td>1:00am - 2:00am</td>
-                            <td><input type="text" /></td>
-                        </tr>
-                        <tr>
-                            <td>2:00am - 3:00am</td>
-                            <td><input type="text" /></td>
-                        </tr>
-                        <tr>
-                            <td>3:00am - 4:00am</td>
-                            <td><input type="text" /></td>
-                        </tr>
-                        <tr>
-                            <td>4:00am - 5:00am</td>
-                            <td><input type="text" /></td>
-                        </tr>
-                        <tr>
-                            <td>5:00am - 6:00am</td>
-                            <td><input type="text" /></td>
-                        </tr>
-                        <tr>
-                            <td>6:00am - 7:00am</td>
-                            <td><input type="text" /></td>
-                        </tr>
-                        <tr>
-                            <td>7:00am - 8:00am</td>
-                            <td><input type="text" /></td>
-                        </tr>
-                        <tr>
-                            <td>8:00am - 9:00am</td>
-                            <td>Breakfast</td>
-                        </tr>
-                        <tr>
-                            <td>9:00am - 10:00am</td>
-                            <td><input type="text" /></td>
-                        </tr>
-                        <tr>
-                            <td>10:00am - 11:00am</td>
-                            <td><input type="text" /></td>
-                        </tr>
-                        <tr>
-                            <td>11:00am - 12:00pm</td>
-                            <td><input type="text" /></td>
-                        </tr>
-                        <tr>
-                            <td>12:00pm - 1:00pm</td>
-                            <td>Lunch</td>
-                        </tr>
-                        <tr>
-                            <td>1:00pm - 2:00pm</td>
-                            <td><input type="text" /></td>
-                        </tr>
-                        <tr>
-                            <td>2:00pm - 3:00pm</td>
-                            <td><input type="text" /></td>
-                        </tr>
-                        <tr>
-                            <td>3:00pm - 4:00pm</td>
-                            <td><input type="text" /></td>
-                        </tr>
-                        <tr>
-                            <td>4:00pm - 5:00pm</td>
-                            <td><input type="text" /></td>
-                        </tr>
-                        <tr>
-                            <td>5:00pm - 6:00pm</td>
-                            <td><input type="text" /></td>
-                        </tr>
-                        <tr>
-                            <td>6:00pm - 7:00pm</td>
-                            <td><input type="text" /></td>
-                        </tr>
-                        <tr>
-                            <td>7:00pm - 8:00pm</td>
-                            <td>Dinner</td>
-                        </tr>
-                        <tr>
-                            <td>8:00pm - 9:00pm</td>
-                            <td><input type="text" /></td>
-                        </tr>
-                        <tr>
-                            <td>9:00pm - 10:00pm</td>
-                            <td><input type="text" /></td>
-                        </tr>
-                        <tr>
-                            <td>10:00pm - 11:00pm</td>
-                            <td><input type="text" /></td>
-                        </tr>
-                        <tr>
-                            <td>11:00pm - 12:00am</td>
-                            <td><input type="text" /></td>
-                        </tr>
-                    </table>
-                </div>
-                <div style="display: table-cell;">
-                    <h4>To-Do List</h4>
-                    <div id="myDIV" class="header">
-                        <input type="text" id="myInput" placeholder="Title...">
-                        <span onclick="newElement()" class="addBtn">Add</span>
-                    </div>
-
-                    <ul id="myUL">
-                        <li>Do the laundry</li>
-                        <li>Organize your room</li>
-                        <li>Touch grass</li>
-                        <li>Shower</li>
-                        <li>Meditate</li>
-                    </ul>
-
-                    <script>
-                        // Create a "close" button and append it to each list item
-                        var myNodelist = document.getElementsByTagName("LI");
-                        var i;
-                        for (i = 0; i < myNodelist.length; i++) {
-                            var span = document.createElement("SPAN");
-                            var txt = document.createTextNode("\u00D7");
-                            span.className = "close";
-                            span.appendChild(txt);
-                            myNodelist[i].appendChild(span);
-                        }
-
-                        // Click on a close button to hide the current list item
-                        var close = document.getElementsByClassName("close");
-                        var i;
-                        for (i = 0; i < close.length; i++) {
-                            close[i].onclick = function () {
-                                var div = this.parentElement;
-                                div.style.display = "none";
-                            }
-                        }
-
-                        // Add a "checked" symbol when clicking on a list item
-                        var list = document.querySelector('ul');
-                        list.addEventListener('click', function (ev) {
-                            if (ev.target.tagName === 'LI') {
-                                ev.target.classList.toggle('checked');
-                            }
-                        }, false);
-
-                        // Create a new list item when clicking on the "Add" button
-                        function newElement() {
-                            var li = document.createElement("li");
-                            var inputValue = document.getElementById("myInput").value;
-                            var t = document.createTextNode(inputValue);
-                            li.appendChild(t);
-                            if (inputValue === '') {
-                                alert("You must write something!");
-                            } else {
-                                document.getElementById("myUL").appendChild(li);
-                            }
-                            document.getElementById("myInput").value = "";
-
-                            var span = document.createElement("SPAN");
-                            var txt = document.createTextNode("\u00D7");
-                            span.className = "close";
-                            span.appendChild(txt);
-                            li.appendChild(span);
-
-                            for (i = 0; i < close.length; i++) {
-                                close[i].onclick = function () {
-                                    var div = this.parentElement;
-                                    div.style.display = "none";
-                                }
-                            }
-                        }
-                    </script>
-                </div>
-            </div>
-        </div>
-    </div>
-
+</center>
     <a class="prev" onclick="plusSlides(-1)" style="margin:-50px">❮</a>
     <a class="next" onclick="plusSlides(1)" style="margin:-50px">❯</a>
-
-</div>
+    <script>
+        function plusSlides(int) {
+            document.getElementById("datetitle").remove();
+            var h4 = document.createElement("h4");
+            num += int;
+            if (num > 31) {
+                num = 1
+            }
+            if (num < 1) {
+                num = 31
+            }
+            day = dict[num];
+            var trans = document.createTextNode(day);
+            trans = document.createTextNode(day);
+            h4.setAttribute('id', 'datetitle')
+            h4.appendChild(trans);
+            document.getElementById("fulldate").appendChild(h4);
+        }
+    </script>
 <br>
 
 
-<script>
-    let slideIndex = 1;
-    showSlides(slideIndex);
-
-    function plusSlides(n) {
-        showSlides(slideIndex += n);
-    }
-
-    function currentSlide(n) {
-        showSlides(slideIndex = n);
-    }
-
-    function showSlides(n) {
-        let i;
-        let slides = document.getElementsByClassName("mySlides");
-        let dots = document.getElementsByClassName("dot");
-        if (n > slides.length) { slideIndex = 1 }
-        if (n < 1) { slideIndex = slides.length }
-        for (i = 0; i < slides.length; i++) {
-            slides[i].style.display = "none";
-        }
-        for (i = 0; i < dots.length; i++) {
-            dots[i].className = dots[i].className.replace(" active", "");
-        }
-        slides[slideIndex - 1].style.display = "block";
-        dots[slideIndex - 1].className += " active";
-    }
-</script>
 
 
 
@@ -649,11 +311,13 @@
     }
 
     ul li {
+        width: 500px;
         cursor: pointer;
         position: relative;
         padding: 12px 8px 12px 40px;
         list-style-type: none;
         background: #eee;
+        text-align: left;
         font-size: 18px;
         font-family: 'Ink Free';
         font-weight: bold;
@@ -711,6 +375,7 @@
 
     .header {
         background-color: #ccccff;
+        width: 500px;
         padding: 30px 40px;
         color: white;
         text-align: center;
@@ -781,7 +446,7 @@
     }
 
     .next {
-        right: 200px;
+        right: 100px;
         border-radius: 0 0 0 0;
     }
 

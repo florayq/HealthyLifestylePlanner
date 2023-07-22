@@ -22,9 +22,9 @@
                 <table class="nav navbar-nav">
                     <tr>
                         <th>@Html.ActionLink("Home", "Index", "Home")</th>
-                        <th>@Html.ActionLink("Daily Plans", "About", "Home")</th>
+                        <th>@Html.ActionLink("Daily Plans", "About", "Home", new { num = 1 }, null)</th>
                         <th>@Html.ActionLink("Monthly Plans", "Homepg", "Home")</th>
-                        <th>@Html.ActionLink("Clock", "Contact", "Home")</th>
+                        @*<th>@Html.ActionLink("Clock", "Contact", "Home")</th>*@
                     </tr>
                 </table>
             </div>

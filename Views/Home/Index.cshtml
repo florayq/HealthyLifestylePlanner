@@ -96,14 +96,6 @@
         <br /><br />
     </div>
     <div class="child" style="padding-top:200px">
-        <h2 style="font-family:'Ink Free'; font-weight:bold">Citizen of the Week!</h2>
-        <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_640.png" alt="Girl in a jacket" width="250" height="250">
-        <h3 style="font-family:'Ink Free';font-weight:bold">Bob</h3>
-        <p style="font-family:'Ink Free';font-weight:bold"> Shout out for fixing the electricity pole. </p>
-        <br /><br />
-        <br /><br />
-    </div>
-    <div class="child" style="padding-top:200px">
         <br /><br />
         <br /><br />
         <h2 style="font-family:'Ink Free'; font-weight:bold; font-size: 36px;">Daily Recommendations!</h2>
@@ -165,89 +157,98 @@
     </div>
     <br /><br />
 
-          <div style="padding-top:200px">
-              <h2 style="font-family:'Ink Free'; font-weight:bold">Community Post!</h2>
-              <br />
-              <section id="myBlog">
-                  <div>
-                      <h3 style="font-family:'Ink Free';font-weight:bold">Summer Picnic</h3>
-                      <p style="font-family:'Ink Free';font-weight:bold;font-size:19px"> 12:00pm Tuesday, August 1st, 2023 </p>
-                      <p style="font-family:'Ink Free';font-weight:bold;font-size:19px"> Penguin park </p>
-                      <p style="font-family:'Ink Free';font-weight:bold;font-size:19px"> Bob is hosting a summer potluck picnic. Feel free to bring utensils, picnic blankets, food, drinks, and more!</p>
-                  </div>
-              </section>
-              <br />
+    <div class="child" style="padding-top:200px">
+        <h2 style="font-family:'Ink Free'; font-weight:bold">Citizen of the Week!</h2>
+        <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_640.png" alt="Girl in a jacket" width="250" height="250">
+        <h3 style="font-family:'Ink Free';font-weight:bold">Bob</h3>
+        <p style="font-family:'Ink Free';font-weight:bold"> Shout out for fixing the electricity pole. </p>
+        <br /><br />
+        <br /><br />
+    </div>
+
+    <div style="padding-top:200px">
+        <h2 style="font-family:'Ink Free'; font-weight:bold">Community Post!</h2>
+        <br />
+        <section id="myBlog">
+            <div>
+                <h3 style="font-family:'Ink Free';font-weight:bold">Summer Picnic</h3>
+                <p style="font-family:'Ink Free';font-weight:bold;font-size:19px"> 12:00pm Tuesday, August 1st, 2023 </p>
+                <p style="font-family:'Ink Free';font-weight:bold;font-size:19px"> Penguin park </p>
+                <p style="font-family:'Ink Free';font-weight:bold;font-size:19px"> Bob is hosting a summer potluck picnic. Feel free to bring utensils, picnic blankets, food, drinks, and more!</p>
+            </div>
+        </section>
+        <br />
 
 
-              <h3 style="font-family:'Ink Free';font-weight:bold">Submit a post:</h3>
+        <h3 style="font-family:'Ink Free';font-weight:bold">Submit a post:</h3>
 
-              <div id="myDIV" class="header">
-                  <h4 style="font-family:'Ink Free';font-weight:bold">Title:</h4>
-                  <input type="text" id="myInput1" placeholder="Title...">
-                  <br />
-                  <p style="font-family:'Ink Free';font-weight:bold;font-size:19px">Time: </p>
-                  <input type="text" id="myInput2" placeholder="Time...">
-                  <br />
-                  <p style="font-family:'Ink Free';font-weight:bold;font-size:19px">Location: </p>
-                  <input type="text" id="myInput3" placeholder="Location...">
-                  <br />
-                  <p style="font-family:'Ink Free';font-weight:bold;font-size:19px">Details: </p>
-                  <input type="text" id="myInput4" placeholder="Details...">
-                  <br /><br />
-                  <span onclick="newElement()" class="addBtn">Submit</span>
-              </div>
+        <div id="myDIV" class="header">
+            <h4 style="font-family:'Ink Free';font-weight:bold">Title:</h4>
+            <input type="text" id="myInput1" placeholder="Title...">
+            <br />
+            <p style="font-family:'Ink Free';font-weight:bold;font-size:19px">Time: </p>
+            <input type="text" id="myInput2" placeholder="Time...">
+            <br />
+            <p style="font-family:'Ink Free';font-weight:bold;font-size:19px">Location: </p>
+            <input type="text" id="myInput3" placeholder="Location...">
+            <br />
+            <p style="font-family:'Ink Free';font-weight:bold;font-size:19px">Details: </p>
+            <input type="text" id="myInput4" placeholder="Details...">
+            <br /><br />
+            <span onclick="newElement()" class="addBtn">Submit</span>
+        </div>
 
-              <script>
-                  // Create a new list item when clicking on the Add button
-                  function newElement() {
-                      var br = document.createElement("br");
-                      var h3 = document.createElement("h3");
-                      var p1 = document.createElement("p");
-                      var p2 = document.createElement("p");
-                      var p3 = document.createElement("p");
-                      var input1 = document.getElementById("myInput1").value;
-                      var input2 = document.getElementById("myInput2").value;
-                      var input3 = document.getElementById("myInput3").value;
-                      var input4 = document.getElementById("myInput4").value;
+        <script>
+            // Create a new list item when clicking on the Add button
+            function newElement() {
+                var br = document.createElement("br");
+                var h3 = document.createElement("h3");
+                var p1 = document.createElement("p");
+                var p2 = document.createElement("p");
+                var p3 = document.createElement("p");
+                var input1 = document.getElementById("myInput1").value;
+                var input2 = document.getElementById("myInput2").value;
+                var input3 = document.getElementById("myInput3").value;
+                var input4 = document.getElementById("myInput4").value;
 
-                      var a = document.createTextNode(input1);
-                      h3.appendChild(a);
-                      var b = document.createTextNode(input2);
-                      p1.appendChild(b);
-                      var c = document.createTextNode(input3);
-                      p2.appendChild(c);
-                      var d = document.createTextNode(input4);
-                      p3.appendChild(d);
-                      if (input1 === '' || input2 === '' || input3 === '') {
-                          alert("You must write something!");
-                      } else {
-                          document.getElementById("myBlog").appendChild(br);
-                          document.getElementById("myBlog").appendChild(h3);
-                          document.getElementById("myBlog").appendChild(p1);
-                          document.getElementById("myBlog").appendChild(p2);
-                          document.getElementById("myBlog").appendChild(p3);
-                      }
-                      document.getElementById("myInput1").value = "";
-                      document.getElementById("myInput2").value = "";
-                      document.getElementById("myInput3").value = "";
-                      document.getElementById("myInput4").value = "";
+                var a = document.createTextNode(input1);
+                h3.appendChild(a);
+                var b = document.createTextNode(input2);
+                p1.appendChild(b);
+                var c = document.createTextNode(input3);
+                p2.appendChild(c);
+                var d = document.createTextNode(input4);
+                p3.appendChild(d);
+                if (input1 === '' || input2 === '' || input3 === '') {
+                    alert("You must write something!");
+                } else {
+                    document.getElementById("myBlog").appendChild(br);
+                    document.getElementById("myBlog").appendChild(h3);
+                    document.getElementById("myBlog").appendChild(p1);
+                    document.getElementById("myBlog").appendChild(p2);
+                    document.getElementById("myBlog").appendChild(p3);
+                }
+                document.getElementById("myInput1").value = "";
+                document.getElementById("myInput2").value = "";
+                document.getElementById("myInput3").value = "";
+                document.getElementById("myInput4").value = "";
 
-                      for (i = 0; i < close.length; i++) {
-                          close[i].onclick = function () {
-                              var div = this.parentElement;
-                              div.style.display = "none";
-                          }
-                      }
-                  }
-              </script>
-          </div>
+                for (i = 0; i < close.length; i++) {
+                    close[i].onclick = function () {
+                        var div = this.parentElement;
+                        div.style.display = "none";
+                    }
+                }
+            }
+        </script>
+    </div>
 
     <br /><br />
-        <center>
+    <center>
         <div style="font-family:'Ink Free'; font-weight:bold; font-size:30px; padding-top:200px">
-            @Html.ActionLink("Continue to Daily Schedule!", "About", "Home")
+            @Html.ActionLink("Continue to the Schedule!", "About", "Home", new { num = 1 }, null)
         </div>
-        </center>
+    </center>
     <br /><br />
 
 </body>
